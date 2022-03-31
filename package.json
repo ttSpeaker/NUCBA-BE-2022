@@ -19,9 +19,6 @@
     "url": "https://github.com/ttSpeaker/NUCBA-BE-2022/issues"
   },
   "homepage": "https://github.com/ttSpeaker/NUCBA-BE-2022#readme",
-  "dependencies": {
-    "prompt": "^1.2.2"
-  },
   "devDependencies": {
     "nodemon": "^2.0.15"
   }

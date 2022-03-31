@@ -1,11 +1,34 @@
-const prompt = require("prompt");
-const getById = require("./mymodules/controller/getbyid");
+const fs = require("fs");
 
-prompt.start();
+const getData = (path) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, "utf8", (err, result) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+};
+const saveData = (path, data) => {
+  return new Promise((resolve, reject) => {
+    //wrete
+  });
+};
 
-prompt.get(["id"], (err, result) => {
-  if (err) {
-    return err;
+const run = async () => {
+  try {
+    const data = await getData("./data/data.json");
+    const dataObject = JSON.parse(data);
+    console.log(dataObject[1].name);
+    // then
+    // await saveData("./data/newfile.txt", data);
+    // ...
+    return;
+  } catch (err) {
+    console.log(err);
+    return;
   }
-  getById(result);
-});
+};
+
+run();
