@@ -1,0 +1,23 @@
+{
+  "name": "back-101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "claseanterior.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttSpeaker/NUCBA-BE-2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttSpeaker/NUCBA-BE-2022/issues"
+  },
+  "homepage": "https://github.com/ttSpeaker/NUCBA-BE-2022#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
