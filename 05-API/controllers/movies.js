@@ -1,18 +1,21 @@
 const Movie = require("../models/movie");
 
 const createMovie = async (req, res, next) => {
-  console.log("Creating movie:", req.body);
-  if (req.body.title === "") {
+  const title = req.body.title;
+
+  if (!titleIsValid(title)) {
     res.statusCode = 400;
     res.send("Title cannot be empty");
-  }
-  
-  const moviesByName = await Movie.findByTitle(req.query.title);
-  if (moviesByName.length > 0) {
-    res.statusCode = 400;
-    res.send("Movie with this title already exists");
+    return;
   }
 
+  if (await movieAlreadyExists(title)) {
+    res.statusCode = 400;
+    res.send("Movie with this title already exists");
+    return;
+  }
+
+  // Creo la entidad
   let newMovie = new Movie(
     req.body.title,
     req.body.description,
@@ -20,7 +23,9 @@ const createMovie = async (req, res, next) => {
     req.body.director,
     req.body.genres
   );
+
   try {
+    // Salvando la nueva entidad
     newMovie = await newMovie.save();
     res.send(newMovie);
   } catch (err) {
@@ -38,7 +43,19 @@ const findMovieByTitle = async (req, res, next) => {
   console.log("Response movie", movie);
   res.send(movie);
 };
+
+const titleIsValid = (title) => {
+  return title !== "";
+};
+
+const movieAlreadyExists = async (title) => {
+  const moviesByName = await Movie.findByTitle(title);
+  return moviesByName.length > 0;
+};
+
 module.exports = {
   createMovie,
   findMovieByTitle,
 };
+
+

@@ -12,7 +12,7 @@ router.get("/search", moviesController.findMovieByTitle);
 
 // /api/movies/
 router.get("/", () => {
-  console.log("get all movie");
+  console.log("get all movies");
 });
 
 // /api/movies/rank
