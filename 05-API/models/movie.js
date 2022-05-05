@@ -1,4 +1,6 @@
 const filesMethods = require("./filesmethods");
+const db = require("../utils/db");
+
 const { v4: uuidv4 } = require("uuid");
 
 class Movie {

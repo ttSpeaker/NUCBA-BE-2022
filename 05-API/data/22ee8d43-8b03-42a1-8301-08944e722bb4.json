@@ -1,1 +1,15 @@
-{"id":"22ee8d43-8b03-42a1-8301-08944e722bb4","title":{"id":"10ff0707-0e7c-4866-9a45-605d6e18f52e","title":"Harry Potter","description":"Escuela de magos","cast":["Daniel","Emma"],"director":"","genres":["Aventura","Fantasia"],"reviews":[]},"description":"","cast":[],"director":"","genres":[],"reviews":[{"score":2,"author":"Cosme Fulanito","content":"Me gusto mucho la pelicula"}]}
+{
+  "id": "22ee8d43-8b03-42a1-8301-08944e722bb4",
+  "title": "Harry Potter 4: The asdasd",
+  "description": "",
+  "cast": [],
+  "director": "",
+  "genres": ["Fantasia", "Aventura"],
+  "reviews": [
+    {
+      "score": 2,
+      "author": "Cosme Fulanito",
+      "content": "Me gusto mucho la pelicula"
+    }
+  ]
+}

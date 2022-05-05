@@ -1,0 +1,15 @@
+{
+  "id": "1bb73219-0c85-46d2-afb9-b55dd71bc2cc",
+  "title": "Harry Potter",
+  "description": "escuela de magos",
+  "cast": ["Daniel", "Emma"],
+  "genres": ["Aventura", "Fantasia"],
+  "releaseDate": "",
+  "reviews": [
+    {
+      "score": 4,
+      "content": "Me gusto mucho la pelicula",
+      "author": "Cosme Fulanito"
+    }
+  ]
+}
