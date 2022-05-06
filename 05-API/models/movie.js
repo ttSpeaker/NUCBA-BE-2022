@@ -1,5 +1,5 @@
 const filesMethods = require("./filesmethods");
-const db = require("../utils/db");
+const prisma = require("../utils/client");
 
 const { v4: uuidv4 } = require("uuid");
 
@@ -13,7 +13,7 @@ class Movie {
     this.genres = genres ? genres : [];
     this.reviews = reviews.length > 0 ? reviews : [];
   }
-
+ 
   async save() {
     try {
       await filesMethods.saveEntity(this);
